@@ -42,6 +42,14 @@ public class CompanyNavbar extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        Fragment fragment = null;
+        fragment = new JobPosting();
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.framelayout_content, fragment);
+            ft.commit();
+        }
     }
 
     @Override
@@ -94,6 +102,7 @@ public class CompanyNavbar extends AppCompatActivity
         } else if (id == R.id.nav_new_application) {
             fragment = new NewJobPosting();
         } else if (id == R.id.nav_feedback) {
+            fragment = new Feedback();
 
         }
 

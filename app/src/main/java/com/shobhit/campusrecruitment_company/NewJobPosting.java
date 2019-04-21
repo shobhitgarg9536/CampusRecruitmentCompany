@@ -55,10 +55,11 @@ public class NewJobPosting  extends Fragment {
                 if(!TextUtils.isEmpty(contactPerson) && !TextUtils.isEmpty(noOfVacancy) && !TextUtils.isEmpty(vacancyName) &&
                         !TextUtils.isEmpty(postName) && !TextUtils.isEmpty(dateOfInterview) ){
                     String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                    NewJobPostingModel newJobPostingModel = new NewJobPostingModel(userId, contactPerson,vacancyName,postName,
+                    String jobId = databaseJobs.push().getKey();
+                    NewJobPostingModel newJobPostingModel = new NewJobPostingModel(jobId, userId, contactPerson,vacancyName,postName,
                                                                                  noOfVacancy,dateOfInterview);
-                    String id = databaseJobs.push().getKey();
-                    databaseJobs.child(id).setValue(newJobPostingModel);
+
+                    databaseJobs.child(jobId).setValue(newJobPostingModel);
                    // startActivity(new Intent(getApplicationContext(), CompanyNavbar.class));
 
                 }

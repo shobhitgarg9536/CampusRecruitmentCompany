@@ -1,13 +1,14 @@
 package com.shobhit.campusrecruitment_company;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -56,9 +57,20 @@ public class JobPosting extends Fragment {
                     if(userId.equals(companyId))
                     listJobs.add(jobPostingModel);
                 }
-                //System.out.print("\n\n\n"+listJobs.size());
+
                 JobPostingArray jobPostingArray = new JobPostingArray(getActivity(), listJobs);
                 lvJobs.setAdapter(jobPostingArray);
+
+                lvJobs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String jobId = listJobs.get(position).getJobId();
+                        //System.out.println(jobId);
+                        Intent i = new Intent(getContext(), TotalApplicants.class);
+                        i.putExtra("jobId",jobId);
+                        startActivity(i);
+                    }
+                });
 
             }
 

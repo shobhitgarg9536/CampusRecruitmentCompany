@@ -23,6 +23,51 @@
           }
         },
         {
+          "client_id": "1055821555101-1qqcmn5i7fivugb0itklr5npbm5iau9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shobhit.campusrecruitment_company",
+            "certificate_hash": "014e23b9ac27548bd0f203fe7a3ddce39b3ad70c"
+          }
+        },
+        {
+          "client_id": "1055821555101-4noofl13duiah9bqc64tp6u8hvh4n6s7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkViY-6zRTMHpzrC7GKceJenfjcS_EnjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055821555101-4noofl13duiah9bqc64tp6u8hvh4n6s7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055821555101:android:db16f444ce3c7661",
+        "android_client_info": {
+          "package_name": "com.shobhit.campusrecruitmentstudent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055821555101-43hj9n5f71mau2da12eiiqd2vpfo056f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shobhit.campusrecruitmentstudent",
+            "certificate_hash": "014e23b9ac27548bd0f203fe7a3ddce39b3ad70c"
+          }
+        },
+        {
           "client_id": "1055821555101-4noofl13duiah9bqc64tp6u8hvh4n6s7.apps.googleusercontent.com",
           "client_type": 3
         }

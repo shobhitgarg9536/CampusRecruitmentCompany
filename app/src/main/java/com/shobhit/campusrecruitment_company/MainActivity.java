@@ -141,12 +141,19 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();
-                            sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                            String studentId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                            DatabaseReference databaseStudent = FirebaseDatabase.getInstance().getReference("register");
+                            System.out.println(databaseStudent.toString());
+                            if(!databaseStudent.child(studentId).getKey().isEmpty())
+                                startActivity(new Intent(getApplicationContext(), CompanyNavbar.class));
+                            else
+                                startActivity(new Intent(getApplicationContext(), CompanyDetails.class));
+                            /*sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                             String email2 = sharedPreferences.getString("Email","");
                             if(email2.equals(email))
                                 startActivity(new Intent(getApplicationContext(), CompanyNavbar.class));
                             else
-                                startActivity(new Intent(getApplicationContext(), CompanyDetails.class));
+                                startActivity(new Intent(getApplicationContext(), CompanyDetails.class));*/
                         }
                     }
                 });

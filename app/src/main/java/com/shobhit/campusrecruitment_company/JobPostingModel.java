@@ -4,7 +4,8 @@ public class JobPostingModel {
 
     public JobPostingModel(){}
 
-    public JobPostingModel(String companyId, String companyName, String vacancyName, String noOfVacancy, String dateOfInterview) {
+    public JobPostingModel(String jobId, String companyId, String companyName, String vacancyName, String noOfVacancy, String dateOfInterview) {
+        this.jobId = jobId;
         this.companyId = companyId;
         this.companyName = companyName;
         this.vacancyName = vacancyName;
@@ -52,5 +53,13 @@ public class JobPostingModel {
         this.companyId = companyId;
     }
 
-    private String companyId, companyName, vacancyName, NoOfVacancy, DateOfInterview;
+    public String getJobId() {
+        return jobId;
+    }
+
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
+    }
+
+    private String jobId, companyId, companyName, vacancyName, NoOfVacancy, DateOfInterview;
 }

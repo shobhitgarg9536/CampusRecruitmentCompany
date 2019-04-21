@@ -2,7 +2,16 @@ package com.shobhit.campusrecruitment_company;
 
 public class NewJobPostingModel {
 
-    public NewJobPostingModel(String companyId, String contactPerson, String vacancyName, String postName, String noOfVacancy, String dateOfInterview) {
+    public String getJobId() {
+        return JobId;
+    }
+
+    public void setJobId(String jobId) {
+        JobId = jobId;
+    }
+
+    public NewJobPostingModel(String jobId, String companyId, String contactPerson, String vacancyName, String postName, String noOfVacancy, String dateOfInterview) {
+        JobId  = jobId;
         CompanyId = companyId;
         ContactPerson = contactPerson;
         VacancyName = vacancyName;
@@ -59,5 +68,5 @@ public class NewJobPostingModel {
         CompanyId = companyId;
     }
 
-    private String CompanyId, ContactPerson, VacancyName, PostName, NoOfVacancy, DateOfInterview;
+    private String CompanyId, ContactPerson, VacancyName, PostName, NoOfVacancy, DateOfInterview, JobId;
 }
