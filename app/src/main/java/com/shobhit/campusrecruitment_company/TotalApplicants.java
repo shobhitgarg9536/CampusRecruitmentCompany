@@ -42,7 +42,7 @@ public class TotalApplicants extends AppCompatActivity {
         }
         listJobs = new ArrayList<>();
 
-        //String studentId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        //String companyId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         databasejobs = FirebaseDatabase.getInstance().getReference("jobs").child(jobId).child("applied student id");
 
 
@@ -70,7 +70,7 @@ public class TotalApplicants extends AppCompatActivity {
                                     String studentId = listJobs.get(position).getUserId();
                                     //System.out.println(jobId);
                                     Intent i = new Intent(TotalApplicants.this, ViewAppliedStudentProfile.class);
-                                    i.putExtra("studentId",studentId);
+                                    i.putExtra("companyId",studentId);
                                     startActivity(i);
                                 }
                             });

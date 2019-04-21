@@ -29,7 +29,7 @@ public class ViewAppliedStudentProfile extends AppCompatActivity {
         Bundle b = iin.getExtras();
         if(b!=null)
         {
-            studentId =(String) b.get("studentId");
+            studentId =(String) b.get("companyId");
         }
 
         etstudentName = findViewById(R.id.textViewViewStudentName);
